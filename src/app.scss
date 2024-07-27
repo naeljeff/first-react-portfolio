@@ -1,0 +1,29 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: orange;
+        position: relative;
+        top: 80px;
+        
+        // Snap-scrolling, y axis, mandatory --> scroll normaly
+        scroll-snap-type: y mandatory;
+
+        // Hide scrollbar
+        scrollbar-width: none; //For Firefox
+        &::-webkit-scrollbar{
+            display: none; //For other browser
+        }
+
+        scroll-behavior: smooth;
+
+        // For each elements inside
+        > *{
+            width: 100vw;
+            height: calc(100vh - 80px);
+            scroll-snap-align: start;
+        }
+    }
+}

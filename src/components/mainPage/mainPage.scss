@@ -1,0 +1,93 @@
+.mainPage{
+    background-color: white;
+    display: flex;
+
+    .left-part{
+        flex: 0.4;
+        overflow: hidden;
+
+        .mainImage{
+            width: 600px;
+            height: 600px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            float: center;
+            margin-left: 50px;
+            margin-top: 100px;
+
+            img{
+                height: 90%;
+            }
+        }
+    }
+
+    .right-part{
+        flex: 0.6;
+        position: relative;
+        
+        .container{
+            height: 100%;
+            width: 100%;
+            padding-left: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+                color: rgb(0, 162, 255);
+                font-weight: bold;
+            }
+            h2{
+                font-size: 35px;
+                color: rgb(0, 4, 61);
+            }
+            p{
+                font-size: 30px;
+                margin-bottom: 15px;
+                color: rgb(0, 4, 61);
+            }
+            h3{
+                font-size: 25px;
+                color: rgb(0, 4, 61);
+                
+                span{
+                    font-size: inherit;
+                    color: rgb(0, 162, 255);
+                }
+
+                .ityped-cursor {
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink{
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        a{
+            position: absolute;
+            bottom: 15px;
+            left: 40%;
+
+            img{
+                width: 40px;
+                animation: blink 1.5s infinite;
+            }
+
+            @keyframes blink{
+                100%{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
